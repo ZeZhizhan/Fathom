@@ -1,5 +1,7 @@
 # Fathom · 深寻
 
+**简体中文** | [English](README.en.md)
+
 **给 AI 用的长期记忆 + 动态情绪 + 睡眠系统**
 
 SQLite 记忆库 · FTS5 中文检索 · 提示词注入 · 四态睡眠状态机 · 3D 记忆星图面板
@@ -9,6 +11,9 @@ SQLite 记忆库 · FTS5 中文检索 · 提示词注入 · 四态睡眠状态�
 > `fathom` 是测海深的单位，也是「想明白、揣摩透」。记忆检索就是往深处捞——一次下潜，把沉下去的那件事带回来。
 
 **MIT 许可 · 零运行时依赖 · 面板免构建 · 数据全在本地一个 SQLite 文件里**
+
+- 仓库：<https://github.com/ZeZhizhan/Fathom>
+- 问题反馈：<https://github.com/ZeZhizhan/Fathom/issues>
 
 ---
 
@@ -60,7 +65,7 @@ DeepSeek Harness（DSH）的一个插件。装上之后，AI 会把对话里值�
 ### 1. 把仓库下载到本地
 
 ```bash
-git clone <你的仓库地址> Fathom
+git clone https://github.com/ZeZhizhan/Fathom.git Fathom
 ```
 
 或者网页上 **Code → Download ZIP** 解压到任意目录，例如：
