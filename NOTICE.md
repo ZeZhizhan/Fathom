@@ -52,7 +52,7 @@ Copyright (c) 2026 Fathom · 深寻 contributors
 ---
 
 ## 3. dsh-mood — MIT
-
+https://github.com/JMX-4869/dsh-mood
 - 版本：0.14.16
 - 位置：`vendor/mood/`（14 个模块）
 - 许可：MIT
