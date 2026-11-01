@@ -1,0 +1,36 @@
+{
+  "name": "dsh-mind",
+  "displayName": "Fathom · 深寻",
+  "version": "1.0.0",
+  "description": "Fathom（深寻）—— 给 AI 用的长期记忆 / 动态情绪 / 睡眠系统：SQLite + FTS5 中文 bigram 检索、提示词注入协调器、四态睡眠状态机、3D 记忆星图面板。内部插件 id 仍为 dsh-mind（路由 / 数据目录 / 工具名保持稳定）。",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": ["fathom", "memory", "agent", "sqlite", "fts5", "deepseek-harness", "llm-memory"],
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "node scripts/build-panel.mjs",
+    "test": "node --test test/"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "panel/",
+    "vendor/",
+    "scripts/",
+    "docs/assets/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": { "optional": true }
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}
