@@ -21,8 +21,10 @@
     "docs/assets/",
     "cordis.patch.yml",
     "README.md",
+    "README.en.md",
     "LICENSE",
-    "NOTICE.md"
+    "NOTICE.md",
+    "CHANGELOG.md"
   ],
   "peerDependencies": {
     "@deepseek-ai/dsh-tools": "*"

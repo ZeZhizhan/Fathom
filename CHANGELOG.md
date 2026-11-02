@@ -1,5 +1,25 @@
 # 更新日志
 
+> **维护约定（从现在起）**：每次改代码或改发布文件，都要在文件最上面写一条更新日志 —— 没发版就先追加到 `## 未发布`，发版时把 `## 未发布` 改成 `## vX.Y.Z — YYYY-MM-DD`，再补 `---` 与上一版隔开。别只改代码不记日志，也别等事后补。
+
+## v1.0.0 — 2026-11-02
+
+### 修复
+
+- **语音合成失败只给一句话**：BreezeBlue 出错时原来只回 `fetch failed` 这类信息，看不出是代理不通、key 失效还是音色 ID 错。现在错误对象同时读 `message` / `code` / `name`，并附一条排查提示「若提示 TLS/socket，先检查代理是否可用（BreezeBlue 需要能出网）」。`POST /voice/test`（面板「测试合成」）与 `POST /voice/send` 共用这套返回。
+
+### 发布整理
+
+- **LICENSE**：署名统一为 `Copyright (c) 2026 Fathom · 深寻 contributors`，与 `NOTICE.md` 一致。
+- **NOTICE.md**：第 3 节 dsh-mood 补回上游仓库地址 `https://github.com/JMX-4869/dsh-mood`。
+- **package.json**：`files` 补回 `README.en.md`、`CHANGELOG.md`；版本号 `0.3.0` → `1.0.0`。
+
+### 说明
+
+- 功能与 v0.3.0 一致，本次是版本号 bump + 发布文件整理。
+
+---
+
 ## v0.3.0
 
 ### 修复

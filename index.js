@@ -1438,7 +1438,7 @@ function syncFatigueToMood(fatigue) {
               text,
             })
           } catch (e) {
-            return send({ ok: false, error: (e?.message ?? String(e)).slice(0, 300) }, 500)
+            return send({ ok: false, error: (e?.message || e?.code || e?.name || String(e)).slice(0, 300), hint: '若提示 TLS/socket，先检查代理是否可用（BreezeBlue 需要能出网）' }, 500)
           }
         })
       }
@@ -1470,7 +1470,7 @@ function syncFatigueToMood(fatigue) {
             const r = await sendVoiceBase64(sl, to, audio.buffer)
             return send({ ok: true, to, bytes: audio.buffer.length, messageId: r.messageId, text })
           } catch (e) {
-            return send({ ok: false, error: (e?.message ?? String(e)).slice(0, 300) }, 500)
+            return send({ ok: false, error: (e?.message || e?.code || e?.name || String(e)).slice(0, 300), hint: '若提示 TLS/socket，先检查代理是否可用（BreezeBlue 需要能出网）' }, 500)
           }
         })
       }
